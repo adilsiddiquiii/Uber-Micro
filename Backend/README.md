@@ -273,14 +273,14 @@ Retrieves the coordinates (latitude and longitude) for a given address.
 
 ### Example Request
 
-GET `/maps/get-coordinates?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA`
+GET `/maps/get-coordinates?address=Times+Square,+New+York,+NY`
 
 ### Example Response
 
 ```json
 {
-  "ltd": 37.4224764,
-  "lng": -122.0842499
+  "ltd": 40.758896,
+  "lng": -73.985130
 }
 ```
 
@@ -313,7 +313,7 @@ Retrieves the distance and estimated travel time between two locations.
 ### Example Request
 
 ```
-GET /maps/get-distance-time?origin=New+York,NY&destination=Los+Angeles,CA
+GET /maps/get-distance-time?origin=Central+Park,NY&destination=Times+Square,NY
 ```
 
 ### Example Response
@@ -321,12 +321,12 @@ GET /maps/get-distance-time?origin=New+York,NY&destination=Los+Angeles,CA
 ```json
 {
   "distance": {
-    "text": "2,789 miles",
-    "value": 4486540
+    "text": "1.2 miles",
+    "value": 1931
   },
   "duration": {
-    "text": "1 day 18 hours",
-    "value": 154800
+    "text": "8 mins",
+    "value": 480
   }
 }
 ```
@@ -359,15 +359,15 @@ Retrieves autocomplete suggestions for a given input string.
 ### Example Request
 
 ```
-GET /maps/get-suggestions?input=1600+Amphitheatre
+GET /maps/get-suggestions?input=Times+Square
 ```
 
 ### Example Response
 
 ```json
 [
-  "1600 Amphitheatre Parkway, Mountain View, CA, USA",
-  "1600 Amphitheatre Pkwy, Mountain View, CA 94043, USA"
+  "Times Square, New York, NY, USA",
+  "Times Square Church, West 51st Street, New York, NY, USA"
 ]
 ```
 
